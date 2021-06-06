@@ -113,7 +113,7 @@ async def job_close():
         try:
             await tbot.send_message(
                 int(warner.chat_id),
-                "`12:00 Am, Group Is Closing Till 6 Am. Night Mode Started !` \n**Powered By @DaisyXbot**",
+                "`11:10 Am, Group Is Closing Till 6 Am. Night Mode Started !` \n**Powered By @ithunammacinema**",
             )
             await tbot(
                 functions.messages.EditChatDefaultBannedRightsRequest(
@@ -131,7 +131,7 @@ async def job_close():
 
 
 scheduler = AsyncIOScheduler(timezone="Asia/Kolkata")
-scheduler.add_job(job_close, trigger="cron", hour=23, minute=55)
+scheduler.add_job(job_close, trigger="cron", hour=23, minute=10)
 scheduler.start()
 
 
@@ -143,7 +143,7 @@ async def job_open():
         try:
             await tbot.send_message(
                 int(warner.chat_id),
-                "`06:00 Am, Group Is Opening.`\n**Powered By @DaisyXBot**",
+                "`06:00 Am, Group Is Opening.`\n**Powered By @ithunammacinema**",
             )
             await tbot(
                 functions.messages.EditChatDefaultBannedRightsRequest(
@@ -163,7 +163,7 @@ __mod_name__ = "Night Mode"
 
 __help__ = """
 <b> The Night mode </b>
-Close your group at 12.00 a.m. and open back at 6.00 a.m.(IST)
+Close your group at 11.00 a.m. and open back at 6.00 a.m.(IST)
 <i> Only available for asian countries (India Standard time)</i>
 
 - /nightmode [ON/OFF]: Enable/Disable Night Mode.
