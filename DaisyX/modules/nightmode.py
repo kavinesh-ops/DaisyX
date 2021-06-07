@@ -163,7 +163,7 @@ __mod_name__ = "Night Mode"
 
 __help__ = """
 <b> The Night mode </b>
-Close your group at 11.00 a.m. and open back at 6.00 a.m.(IST)
+Close your group at 11.00 p.m. and open back at 6.00 a.m.(IST)
 <i> Only available for asian countries (India Standard time)</i>
 
 - /nightmode [ON/OFF]: Enable/Disable Night Mode.
