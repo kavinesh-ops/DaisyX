@@ -92,7 +92,7 @@ async def get_start_func(message, strings, edit=False):
     )
     buttons.add(
         InlineKeyboardButton(
-            "👸🏼 Add ✪ GPL MANAGER ✪ to your group",
+            "👸🏼 Add ✪ GPL VAATHI ✪ to your group",
             url=f"https://telegram.me/gpl_managerv2bot?startgroup=true",
         )
     )
