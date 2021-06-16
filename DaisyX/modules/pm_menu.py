@@ -78,13 +78,10 @@ async def get_start_func(message, strings, edit=False):
             strings["btn_source"], url="https://github.com/gplkavin/DaisyX/"
         ),
     )
-    buttons.add(
+     buttons.add(
+        InlineKeyboardButton(strings["btn_channel"], url="https://t.me/ithunammacinema"),
         InlineKeyboardButton(
-            "👸🏼 UPDATE CHANNEL 1",
-            url=f"https://t.me/ithunammacinema",
-        InlineKeyboardButton(
-             "👸🏼 UPDATE CHANNEL 1",
-            url=f"https://t.me/vijaytvblast",
+            strings["btn_group"], url="https://t.me/ithunammacinema"
         ),
     )
     buttons.add(
