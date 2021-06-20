@@ -45,10 +45,16 @@ def help_markup(modules):
 
 
 STICKERS = (
-    "CAACAgUAAx0CR81OLwADi2DHRpATKtTA01S1kUArX8MFVAKTAAJ2AgACarA4VjH-WbVEn03wHwQ",
-    "CAACAgUAAx0CR81OLwADiWDHRoygjxgmiK5zDpe1umyIBpojAAJuAwACWH45Vj-IRfWzvHsEHwQ",
-    "CAACAgUAAx0CR81OLwADjmDHRpTPF-5OR3oYgvHcDGLeawpEAAInAgAC7WZBVqR9DQQlV4t1HwQ",
-    "CAACAgUAAx0CR81OLwADj2DHRpVYme1WLGT54L0AAeAdcWkEAQACugIAAn20QVbrlIaBlnYCRR8E",
+    "CAACAgUAAxkBAAJOGmBeli95P073FKVkgc4esfKE4UlXAAIOAgACyavAVkbLMIidWYdyHgQ",
+    "CAACAgUAAxkBAAJOG2BeljABwlCfwzHT1gzyiciBri6_AAIsAgACXBPBVgpGQRz-1qmlHgQ",
+    "CAACAgUAAxkBAAJOHGBeljOJ35CQNnkpnVcgRoHuJX6DAAL3AQACN8TBVm1PIART01cWHgQ",
+    "CAACAgUAAxkBAAJOHWBeljXW9QzYQ51gpCjHZHCF5Ui6AAJ7AgAC3zDBVo2xenp7JYhAHgQ",
+    "CAACAgUAAxkBAAJOHmBeljjU0_FT_QpdUUJBqVUC0nfJAAKYAgACJ_jBVvntHY_8WF27HgQ",
+    "CAACAgUAAxkBAAJOH2BeljrV68mPLu8_6n4edT20Q3IQAAJ9AgACq3LBVmLuZuNPlvkfHgQ",
+    "CAACAgUAAxkBAAJOIGBeljttuniUPykRtzkSZj3SRwKJAAI7AgACNm_BVp8TCkE6ZqCoHgQ",
+    "CAACAgUAAxkBAAJOIWBelj-P_2vtVqtkF2OMlVN3M0N4AAK3AQACSm3BVkXF2voraS2tHgQ",
+    "CAACAgUAAxkBAAJOImBelkJxUBm2rL1iPfMZfk-_9DaOAALrAgAC4T3BVniopXQVsZ4KHgQ",
+    "CAACAgUAAxkBAAJOI2BelkMO0AX_wtAc7hUZz1NixuMlAAKEAwACY4TAViVuNLTBmmkgHgQ",
 )
 
 
@@ -75,25 +81,19 @@ async def get_start_func(message, strings, edit=False):
     buttons.add(
         InlineKeyboardButton(strings["btn_lang"], callback_data="lang_btn"),
         InlineKeyboardButton(
-            strings["btn_source"], url="https://github.com/gplkavin/DaisyX/"
-        ),
-    )
-     buttons.add(
-        InlineKeyboardButton(strings["btn_lang"], callback_data="lang_btn"),
-        InlineKeyboardButton(
-            strings["btn_source"], url="https://github.com/gplkavin/DaisyX/"
+            strings["btn_source"], url="https://github.com/TeamDaisyX/"
         ),
     )
     buttons.add(
-        InlineKeyboardButton(strings["btn_channel"], url="https://t.me/@ithunammacinema"),
+        InlineKeyboardButton(strings["btn_channel"], url="https://t.me/DaisyXUpdates"),
         InlineKeyboardButton(
-            strings["btn_group"], url="https://t.me/joinchat/yXvtd2tc8hZiZTNl"
+            strings["btn_group"], url="https://t.me/DaisySupport_Official"
         ),
     )
     buttons.add(
         InlineKeyboardButton(
-            "👸🏼 Add ✪ GPL VAATHI ✪ to your group",
-            url=f"https://telegram.me/gpl_managerv2bot?startgroup=true",
+            "👸🏼 Add DaisyX to your group",
+            url=f"https://telegram.me/daisyxbot?startgroup=true",
         )
     )
     # Handle error when user click the button 2 or more times simultaneously
@@ -135,7 +135,7 @@ async def help_cmd(message, strings):
 async def help_cmd_g(message, strings):
     text = strings["btn_group_help"]
     button = InlineKeyboardMarkup().add(
-        InlineKeyboardButton(text=text, url="https://t.me/gpl_managerv2bot?start")
+        InlineKeyboardButton(text=text, url="https://t.me/DaisyXBOT?start")
     )
     await message.reply(strings["help_header"], reply_markup=button)
 
