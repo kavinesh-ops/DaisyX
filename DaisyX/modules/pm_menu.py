@@ -45,7 +45,7 @@ def help_markup(modules):
 
 
 STICKERS = (
-    "CAACAgUAAx0CR81OLwACAVhgzzj7Do1ROxGODw7CPscptV0oZQACXAEAApepMFUQoUEcGLRoGB8E",
+    "CAACAgUAAx0CS5pMdAAC7k5g3c3A3Ufe7uJVSjKjtcrOfBSAMQACNwsAAmBffQV2eA5BJKE_7x4E",
 )
 
 
@@ -76,14 +76,14 @@ async def get_start_func(message, strings, edit=False):
         ),
     )
     buttons.add(
-        InlineKeyboardButton(strings["btn_channel"], url="https://t.me/ithunammacinema"),
+        InlineKeyboardButton(strings["btn_channel"], url="https://t.me/joinchat/bJBFGjXS1H4wMWVl"),
         InlineKeyboardButton(
-            strings["btn_group"], url="https://t.me/ithunammacinema"
+            strings["btn_group"], url="https://t.me/joinchat/bJBFGjXS1H4wMWVl"
         ),
     )
     buttons.add(
         InlineKeyboardButton(
-            "👸🏼 Add ✪ GPL VAATHI ✪ to your group",
+            "👸🏼 Add MGM BLASTERS to your group",
             url=f"https://telegram.me/gpl_managerv2bot?startgroup=true",
         )
     )
@@ -126,7 +126,7 @@ async def help_cmd(message, strings):
 async def help_cmd_g(message, strings):
     text = strings["btn_group_help"]
     button = InlineKeyboardMarkup().add(
-        InlineKeyboardButton(text=text, url="https://t.me/gpl_managerv2bot?start")
+        InlineKeyboardButton(text=text, url="https://t.me/ott_blasters_bot?start")
     )
     await message.reply(strings["help_header"], reply_markup=button)
 
