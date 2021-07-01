@@ -82,7 +82,7 @@ async def close_ws(event):
                 return
             add_nightmode(str(event.chat_id))
             await event.reply(
-                f"**Added Chat {event.chat.title} With Id {event.chat_id} To Database. This Group Will Be Closed On 12Am(IST) And Will Opened On 06Am(IST)**"
+                f"**Added Chat {event.chat.title} With Id {event.chat_id} To Database. This Group Will Be Closed On 9.30Pm(IST) And Will Opened On 06Am(IST)**"
             )
         elif (
             input_str == "off"
@@ -96,7 +96,7 @@ async def close_ws(event):
                 return
             rmnightmode(str(event.chat_id))
             await event.reply(
-                f"**Removed Chat {event.chat.title} With Id {event.chat_id} From Database. This Group Will Be No Longer Closed On 12Am(IST) And Will Opened On 06Am(IST)**"
+                f"**Removed Chat {event.chat.title} With Id {event.chat_id} From Database. This Group Will Be No Longer Closed On 9.30Pm(IST) And Will Opened On 06Am(IST)**"
             )
         else:
             await event.reply("I undestand `/nightmode on` and `/nightmode off` only")
@@ -113,7 +113,7 @@ async def job_close():
         try:
             await tbot.send_message(
                 int(warner.chat_id),
-                "`11:10 Pm, Group Is Closing Till 6 Am. Night Mode Started !` \n**Powered By @ithunammacinema**",
+                "`9:30 Pm, Group Is Closing Till 6 Am. Night Mode Started !` \n**Powered By @ottblasters**",
             )
             await tbot(
                 functions.messages.EditChatDefaultBannedRightsRequest(
@@ -131,7 +131,7 @@ async def job_close():
 
 
 scheduler = AsyncIOScheduler(timezone="Asia/Kolkata")
-scheduler.add_job(job_close, trigger="cron", hour=23, minute=10)
+scheduler.add_job(job_close, trigger="cron", hour=22, minute=10)
 scheduler.start()
 
 
@@ -143,7 +143,7 @@ async def job_open():
         try:
             await tbot.send_message(
                 int(warner.chat_id),
-                "`06:00 Am, Group Is Opening.`\n**Powered By @ithunammacinema**",
+                "`06:00 Am, Group Is Opening.`\n**Powered By @ottblasters**",
             )
             await tbot(
                 functions.messages.EditChatDefaultBannedRightsRequest(
