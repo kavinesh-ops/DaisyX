@@ -45,7 +45,8 @@ def help_markup(modules):
 
 
 STICKERS = (
-    "CAACAgUAAx0CS5pMdAAC7k5g3c3A3Ufe7uJVSjKjtcrOfBSAMQACNwsAAmBffQV2eA5BJKE_7x4E",
+    "CAACAgUAAx0CS5pMdAABASS0YPpGND-KSHt83V6UA9Cif7aSA7AAAlwBAAKXqTBVEKFBHBi0aBgeBA",
+    "CAACAgUAAx0CS5pMdAABASS1YPpGQE_T77SDF1yLjrQCrHfbsIkAAgsCAAJS-DFVEoKjH6pCY0geBA",
 )
 
 
@@ -76,15 +77,15 @@ async def get_start_func(message, strings, edit=False):
         ),
     )
     buttons.add(
-        InlineKeyboardButton(strings["btn_channel"], url="https://t.me/joinchat/bJBFGjXS1H4wMWVl"),
+        InlineKeyboardButton(strings["btn_channel"], url="https://t.me/ithunammacinema"),
         InlineKeyboardButton(
-            strings["btn_group"], url="https://t.me/joinchat/bJBFGjXS1H4wMWVl"
+            strings["btn_group"], url="https://t.me/ithunammacinema"
         ),
     )
     buttons.add(
         InlineKeyboardButton(
-            "👸🏼 Add MGM BLASTERS to your group",
-            url=f"https://telegram.me/gpl_managerv2bot?startgroup=true",
+            "👸🏼 Add GPL VAATHI to your group",
+            url=f"https://telegram.me/gplvaathi_bot?startgroup=true",
         )
     )
     # Handle error when user click the button 2 or more times simultaneously
@@ -126,7 +127,7 @@ async def help_cmd(message, strings):
 async def help_cmd_g(message, strings):
     text = strings["btn_group_help"]
     button = InlineKeyboardMarkup().add(
-        InlineKeyboardButton(text=text, url="https://t.me/ott_blasters_bot?start")
+        InlineKeyboardButton(text=text, url="https://t.me/gplvaathi_bot?start")
     )
     await message.reply(strings["help_header"], reply_markup=button)
 
